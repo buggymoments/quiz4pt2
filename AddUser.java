@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
-public class Login extends Main   {
+public class AddUser extends Main   {
 
     File f = new File("C:\\UserNamePass");
     int ln;
@@ -30,7 +30,7 @@ public class Login extends Main   {
                 FileWriter fw = new FileWriter(f+"\\logins.txt");
                 System.out.println("File created");
             } catch (IOException e) {
-                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AddUser.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
@@ -47,9 +47,9 @@ public class Login extends Main   {
             raf.writeBytes("Username: " + regularUser +"\r\n");
             raf.writeBytes("Password: " + regularPass +"\r\n");
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AddUser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AddUser.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -79,9 +79,9 @@ public class Login extends Main   {
             }
             System.out.println("Number of lines: "+ln);
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AddUser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex){
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AddUser.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -101,9 +101,9 @@ public class Login extends Main   {
                 }
             }
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AddUser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex){
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AddUser.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
